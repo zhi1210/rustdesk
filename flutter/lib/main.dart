@@ -175,9 +175,10 @@ void runMainApp(bool startService) async {
     // Do not use `windowManager.setResizable()` here.
     setResizable(!bind.isIncomingOnly());
 
-    // windowManager.setMinimizable(false);  // 禁止最小化
-    windowManager.setMaximizable(false);  // 禁止最大化
-    windowManager.setResizable(false);   // 禁止拖动边框缩放
+    // 移除冲突代码，直接统一锁定窗口（禁止任何尺寸调整）
+    windowManager.setResizable(false);       // 禁止拖动边框缩放
+    windowManager.setMaximizable(false);     // 禁止最大化
+    windowManager.setMinimizable(true);      // 保留最小化（按需开关）
       
   });
 }
