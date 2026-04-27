@@ -174,6 +174,11 @@ void runMainApp(bool startService) async {
     windowManager.setTitle(getWindowName());
     // Do not use `windowManager.setResizable()` here.
     setResizable(!bind.isIncomingOnly());
+
+    // windowManager.setMinimizable(false);  // 禁止最小化
+    windowManager.setMaximizable(false);  // 禁止最大化
+    windowManager.setResizable(false);   // 禁止拖动边框缩放
+      
   });
 }
 
