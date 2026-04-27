@@ -1007,7 +1007,7 @@ pub fn get_app_name() -> String {
 
 #[inline]
 pub fn is_rustdesk() -> bool {
-    hbb_common::config::APP_NAME.read().unwrap().eq("RustDesk")
+    hbb_common::config::APP_NAME.read().unwrap().eq("rd远控")
 }
 
 #[inline]
@@ -1081,7 +1081,7 @@ fn get_api_server_(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
-    "https://admin.rustdesk.com".to_owned()
+    "".to_owned()
 }
 
 #[inline]
