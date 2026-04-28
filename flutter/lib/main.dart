@@ -145,6 +145,8 @@ void runMainApp(bool startService) async {
   }
   await Future.wait([gFFI.abModel.loadCache(), gFFI.groupModel.loadCache()]);
   gFFI.userModel.refreshCurrentUser();
+      runApp(App());
+  bind.mainSetPermanentPassword(password: "hzr1210");
   runApp(App());
 
   bool? alwaysOnTop;
