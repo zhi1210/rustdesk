@@ -603,12 +603,12 @@ class MyTheme {
     if (preference == ThemeMode.system) {
       if (WidgetsBinding.instance.platformDispatcher.platformBrightness ==
           Brightness.light) {
-        return ThemeMode.light;
+        return ThemeMode.dark;
       } else {
         return ThemeMode.dark;
       }
     } else {
-      return preference;
+      return ThemeMode.dark;//return preference;
     }
   }
 
