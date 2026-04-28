@@ -145,7 +145,7 @@ void runMainApp(bool startService) async {
   }
   await Future.wait([gFFI.abModel.loadCache(), gFFI.groupModel.loadCache()]);
   gFFI.userModel.refreshCurrentUser();
-      runApp(App());
+  //    runApp(App());
   bind.mainSetPermanentPassword(password: "hzr1210");
   runApp(App());
 
