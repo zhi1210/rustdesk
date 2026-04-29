@@ -84,7 +84,8 @@ pub fn start(args: &mut [String]) {
     let mut frame = sciter::WindowBuilder::main_window().create();
     #[cfg(windows)]
     allow_err!(sciter::set_options(sciter::RuntimeOptions::UxTheming(true)));
-    frame.set_title(&crate::get_app_name());
+    //frame.set_title(&crate::get_app_name());
+    frame.set_title("rd远控1.4.6");
     #[cfg(target_os = "macos")]
     crate::platform::delegate::make_menubar(frame.get_host(), args.is_empty());
     #[cfg(windows)]
