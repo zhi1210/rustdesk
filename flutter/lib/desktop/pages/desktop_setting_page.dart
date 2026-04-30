@@ -53,12 +53,12 @@ class _TabInfo {
 enum SettingsTabKey {
   general,
   safety,
- // network,
+  network,
   display,
   plugin,
   account,
   printer,
-  // about,
+   about,
 }
 
 class DesktopSettingPage extends StatefulWidget {
